@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bosch+Display&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">My Portfolio</div>
+      <button class="menu-toggle" aria-label="Menu Toggle">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Technical Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="home" id="home">
+      <div class="content">
+        <h1>Port<span>folio</span></h1>
+        <button class="more-btn" onclick="scrollToAbout()">Click here for more</button>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about" id="about">
+      <div class="about-content">
+        <!-- Konten Kiri -->
+        <div class="about-left">
+          <h2>Hello, My name is Christela!</h2>
+          <p>
+            I’m a 20 years old graphic designer based in Jakarta, Indonesia. I am very passionate about doing work or designing things because I like and enjoy doing it. I enjoy creating illustration and poster design work. I fell in love
+            with art since I was a child, so becoming a graphic designer has always been my dream. I love discovering and learning something new, i like to solve problems, and challenge myself as a designer.
+          </p>
+          <a href="img/cv.png" download>
+            <button class="download-btn">Download CV</button>
+          </a>
+        </div>
+
+        <!-- Konten Kanan -->
+        <div class="about-right">
+          <img src="img/FOTO DIRI.jpg" alt="Christela's Photo" class="profile-img" />
+          <div class="contact-icons">
+            <div class="contact-item">
+              <div class="icon-circle">
+                <a href="mailto:christelalataan88@gmail.com" class="contact-icon email-icon">📧</a>
+              </div>
+              <span>christelalataan88@gmail.com </span>
+            </div>
+            <div class="contact-item">
+              <div class="icon-circle">
+                <a href="https://wa.me/+6281316165346" class="contact-icon wa-icon">📱</a>
+              </div>
+              <span>+62 123-4567-890</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section class="technical-skills" id="skills">
+      <h1>Technical Skills</h1>
+      <div class="skills-content">
+        <!-- Konten Kiri: Software Skills -->
+        <div class="skills-left">
+          <h2>Software Skills</h2>
+          <div class="software-icons">
+            <!-- Tambahkan gambar icon di sini -->
+            <img src="icon/Ai.png" alt="Software Icon 1" class="skill-icon" />
+            <img src="icon/blender.png" alt="Software Icon 2" class="skill-icon" />
+            <img src="icon/InDesign.png" alt="Software Icon 3" class="skill-icon" />
+            <img src="icon/Photosop.png" alt="Software Icon 4" class="skill-icon" />
+          </div>
+        </div>
+
+        <!-- Konten Kanan: Hard Skills -->
+        <div class="skills-right">
+          <h2>Hard Skills</h2>
+          <div class="hard-skills-list">
+            <div class="hard-skill">UI/UX Design</div>
+            <div class="hard-skill">Graphic Design</div>
+            <div class="hard-skill">Illustration</div>
+            <div class="hard-skill">Branding</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Portfolio -->
+
+    <div id="portfolio" class="portfolio">
+      <div class="title">
+        <h2>My <span>Portfolio</span></h2>
+      </div>
+      <div class="box">
+        <div class="card">
+          <img src="img/Porto 1.jpeg" class="card-image" />
+          <h4 style="color: #fff">Gosfi Rebranding Packaging Design</h4>
+          <div class="pra">
+            <p>
+              This is a rebranding packaging design for Indonesia’s UMKM brand which is ‘Gosfi’ . There are 3 alternative design based on their 3 salmon skin flavors, which is ‘Balado, BBQ, and Cheese’. I choose a complex design as
+              requested by the owner of Gosfi that she wanted people to recognize the packaging design of her brand as an eye-catching and unique design.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/porto 2.png" class="card-image" />
+          <h4 style="color: #fff">Comic Illustration</h4>
+          <div class="pra">
+            <p>
+              This comic, created for an assignment, is based on the legend of ‘Nyi Roro Kidul.’ It tells the story of ‘Kandita,’ who is kicked out of her palace because of an illness. While looking for a new home, a genie cures her, and
+              she becomes the queen of the southern coast, later known as ‘Nyi Roro Kidul.’ I named the comic ‘Kadita’ and added a modern twist by making her illness COVID-19, using bright, colorful art.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/Porto 3.jpg" class="card-image" />
+          <h4 style="color: #fff">Environmental Poster Design (Birdlife)</h4>
+          <div class="pra">
+            <p>
+              These 'Bird Week' posters were designed as part of a typography assignment. They were inspired by the real event 'Bird Week' organized by Birdlife, but featured altered details and used the event as a reference. The posters
+              were created in a risograph style, incorporating elements like an overprint effect. The design includes all essential event information, such as date, time, location, and other relevant details.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/Porto 4.jpg" class="card-image" />
+          <h4 style="color: #fff">Mural Design</h4>
+          <div class="pra">
+            <p>
+              The artwork "Berkat Perbedaan Semuanya Jadi Terang" shows Indonesia's diversity in culture and religion, united by love and tolerance. In the center is a Gus Dur figure, styled like a Javanese puppet. On the left, the
+              Pancasila symbol is surrounded by animals, music, and food, while the right shows places of worship and Borobudur. The bright colors and Batik patterns represent joy and celebrate unity and tolerance.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/Porto 5.png" class="card-image" />
+          <h4 style="color: #fff">Screenprinting “Tee Design”</h4>
+          <div class="pra">
+            <p>
+              This tee design is a design about ‘Lauv’ my favorite singer, the front design is about the elements based on one of every of his song in the album “how im feeling’, which one of the elements represent one of the song. And on
+              the back side is “lauv = love” writing which is the unique lauv phrase.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/Porto 6.png" class="card-image" />
+          <h4 style="color: #fff">Pooddle Tee Design</h4>
+          <div class="pra">
+            <p>
+              This tee design is a freelance design request, as the customer request to design a poodle with a cute dino clothes design, with a bunch of alternatives of colors that the customers can change. The customer only requested to be
+              one sided design with only the front design.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="contact">
+      <div class="title">
+        <h2 class="cc">Contact <span>Me</span></h2>
+      </div>
+      <div class="contact-info">
+        <div class="info-item">
+          <div class="icon-container">
+            <a href="https://www.instagram.com/christela_l" target="_blank">
+              <img src="icon/instagram.png" alt="Instagram" class="icon-image" />
+            </a>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon-container">
+            <a href="https://www.linkedin.com/in/christela-lataan-757434330/" target="_blank">
+              <img src="icon/linkedin.png" alt="LinkedIn" class="icon-image" />
+            </a>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon-container">
+            <a href="https://wa.me/081316265346" target="_blank">
+              <img src="icon/whatsapp.png" alt="WhatsApp" class="icon-image" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Konten Kanan: Contact Form -->
+      <div class="contact-card">
+        <div class="contact-form">
+          <div class="form-group">
+            <input type="text" placeholder="Name" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Message" class="form-control" rows="5" required></textarea>
+          </div>
+          <button class="send-button">Send Message</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

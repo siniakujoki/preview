@@ -1,0 +1,780 @@
+@import url("https://fonts.googleapis.com/css2?family=Bosch+Display&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Bosch Display", sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+/* Navbar when scrolled */
+.navbar.scrolled {
+  background-color: rgba(51, 51, 51, 0.8); /* Transparan saat scroll */
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #7e7e67;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Home Section */
+.home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6271a0;
+  color: #fff;
+  text-align: center;
+  flex-direction: column;
+}
+
+.content h1 {
+  font-size: 200px;
+  margin-bottom: 1rem;
+  font-family: "PT Serif", serif;
+  color: #fff;
+  text-shadow: 2px 2px 5px #ffffff;
+  animation: glow 1s infinite alternate;
+}
+@keyframes glow {
+  0% {
+    text-shadow: 2px 2px 5px rgba(18, 219, 255, 0.3);
+  }
+  100% {
+    text-shadow: 2px 2px 15px rgb(255, 255, 255);
+  }
+}
+
+.content h1 span {
+  color: #791e1c;
+}
+
+.more-btn {
+  font-size: 1.2rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #f6c6c2;
+  color: #333;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0px 0px 10px rgba(18, 219, 255, 0.6);
+  animation: glow-btn 1s infinite alternate;
+}
+
+/* Efek saat tombol diklik */
+.more-btn:active {
+  transform: scale(1.05);
+}
+
+/* Hover effect untuk warna */
+.more-btn:hover {
+  background-color: #eab8b5;
+}
+
+/* Animasi glow kedap-kedip untuk tombol */
+@keyframes glow-btn {
+  0% {
+    box-shadow: 0px 0px 10px rgba(18, 219, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+  }
+}
+
+/* About Me Section */
+.about {
+  padding: 4rem 2rem;
+  background-color: #7e7e67;
+  color: #333;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #791e1c;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #eee;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+/* Konten kiri dan kanan */
+.about-left,
+.about-right {
+  flex: 1;
+  text-align: left;
+}
+
+.about-left {
+  max-width: 500px;
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Styling gambar */
+.profile-img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  animation: imageGlow 1.5s infinite alternate;
+}
+
+/* Animasi bayangan kedap-kedip untuk gambar */
+@keyframes imageGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Tombol Download CV */
+.download-btn {
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #f6c6c2;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  animation: buttonGlow 1.5s infinite alternate; /* Menambahkan animasi kedap-kedip */
+}
+
+.download-btn:hover {
+  background-color: #eab8b5;
+}
+
+.download-btn:active {
+  transform: scale(1.05);
+}
+
+/* Animasi bayangan kedap-kedip untuk tombol */
+@keyframes buttonGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Konten Ikon Kontak */
+.contact-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Styling untuk setiap item kontak */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+}
+
+/* Lingkaran dengan bayangan kedap-kedip di sekitar ikon */
+.icon-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #333;
+  animation: iconGlow 1s infinite alternate;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: #12dbff;
+  text-decoration: none;
+}
+
+@keyframes iconGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Responsif */
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* Technical Skills Section */
+.technical-skills {
+  background-color: #72524a;
+  padding: 2rem;
+  color: white;
+}
+.technical-skills h1 {
+  font-size: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #f6c6c2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Software Skills Title: Align to the left */
+.skills-left h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: left; /* Menjadikan judul Software Skills rata kiri */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Konten (Left & Right) Layout */
+.skills-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.skills-left,
+.skills-right {
+  flex: 1;
+}
+
+.skills-left h2,
+.skills-right h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Software Skills Icons - Circle and Glow Animation */
+.software-icons {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start; /* Menggeser ikon sejajar dengan judul */
+  align-items: center; /* Menyelaraskan ikon dengan judul */
+}
+
+.skill-icon {
+  width: 60px; /* Membesarkan ukuran lingkaran */
+  height: 60px; /* Membesarkan ukuran lingkaran */
+  border-radius: 20%; /* Membuat ikon menjadi lingkaran */
+  background-color: #791e1c; /* Memberikan background putih pada lingkaran */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Shadow kedap kedip */
+  animation: iconGlow 1.5s infinite alternate;
+}
+
+.skill-icon img {
+  width: 40px; /* Memperbesar ikon di dalam lingkaran */
+  height: 40px;
+  object-fit: contain;
+  padding: 5px;
+}
+
+/* Shadow Animation for Icons */
+@keyframes iconGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Hard Skills */
+.skills-right h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: left; /* Menyelaraskan judul ke kiri */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Hard Skills List */
+.hard-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start; /* Menggeser konten agar sejajar dengan judul */
+}
+.hard-skill {
+  padding: 0.8rem 1.5rem;
+  background-color: #6271a0;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  animation: hardGlow 1s infinite alternate;
+}
+
+/* Hover effect */
+.hard-skill:hover {
+  background-color: #eab8b5;
+  transform: scale(1.05);
+}
+
+@keyframes hardGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Style Portfolio */
+.portfolio {
+  background-color: #de9690;
+  width: 100%;
+  padding: 100px 0;
+}
+
+.title h2 {
+  color: white;
+  font-size: 55px;
+  width: 1130px;
+  margin: 30px auto;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+.title h2 span {
+  color: #791e1c;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.card {
+  height: 540px;
+  width: 400px;
+  padding: 20px 35px;
+  background: #6271a0;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(127, 58, 58, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 25px #ffffff, 0 0 50px #ffffff;
+}
+
+.card-image {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.card i {
+  font-size: 50px;
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+h4 {
+  font-size: 17px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.pra p {
+  color: #f6c6c2;
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.card .button {
+  background-color: #3de8ff;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 12px 42px;
+  border-radius: 30px;
+  transition: 0.4s;
+}
+
+.card .button:hover {
+  background-color: #12dbff;
+  transform: scale(1.05);
+}
+.box .card:nth-child(2) .card-image {
+  transform: scale(1.4);
+}
+
+.box .card:nth-child(2) {
+  overflow: hidden;
+}
+
+/* stylw untuk Responsif */
+@media (max-width: 1024px) {
+  .title h2 {
+    font-size: 50px;
+  }
+  .box {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title h2 {
+    font-size: 45px;
+  }
+
+  .box {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+
+  .card {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .title h2 {
+    font-size: 30px;
+  }
+
+  .box {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* style contact */
+.contact {
+  text-align: center;
+  background-color: #6271a0;
+  width: 100%;
+  padding: 100px 20px;
+}
+
+.contact .title h2 {
+  font-size: 55px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact .title .cc span {
+  font-size: 55px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Konten Informasi: WhatsApp dan ig Dan Linkedin */
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  margin-bottom: 40px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-container {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #6271a0;
+  animation: iconGlow 1.5s infinite alternate;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+.icon-container:hover {
+  transform: scale(1.1);
+}
+
+.icon-image {
+  width: 100%; /* Icon fills the entire container */
+  height: 100%; /* Ensures the icon is fully contained */
+  object-fit: cover; /* Maintains the icon's aspect ratio */
+}
+
+/* Shadow Animation */
+@keyframes iconGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Contact Card (form) */
+.contact-card {
+  background-color: #72524a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #ffffff;
+  animation: pulse 1.5s infinite alternate;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #791e1c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0 0 15px #ffffff;
+  animation: pulse 1.5s infinite alternate;
+}
+
+/* Send Button */
+.send-button {
+  background-color: #ffffff;
+  color: #791e1c; /* Warna teks yang lebih jelas */
+  padding: 10px 20px; /* Sesuaikan padding agar lebih ramping */
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ffffff;
+  animation: buttonPulse 1.5s infinite alternate; /* Animasi shadow kedap-kedip */
+  transition: background-color 0.3s ease;
+  width: fit-content; /* Sesuaikan lebar dengan ukuran teks */
+  margin: 0 auto;
+}
+
+.send-button:hover {
+  background-color: #feffff;
+}
+
+@keyframes buttonPulse {
+  0% {
+    box-shadow: 0 0 10px #ffffff;
+  }
+  100% {
+    box-shadow: 0 0 20px #ffffff;
+  }
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+  .contact {
+    padding: 80px 15px;
+    text-align: center;
+  }
+
+  .contact .title h2 {
+    font-size: 32px;
+  }
+
+  .contact .title span {
+    font-size: 48px;
+  }
+
+  .contact-card {
+    padding: 20px;
+    max-width: 500px;
+  }
+
+  .form-control {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .send-button {
+    padding: 8px 25px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 10px;
+    text-align: center;
+  }
+
+  .contact .title h2 {
+    font-size: 28px;
+  }
+
+  .contact .title span {
+    font-size: 42px;
+  }
+
+  .contact-card {
+    padding: 15px;
+    max-width: 450px;
+  }
+
+  .form-control {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .send-button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 40px 5px;
+    text-align: center;
+  }
+
+  .contact .title h2 {
+    font-size: 24px;
+  }
+
+  .contact .title span {
+    font-size: 36px;
+  }
+
+  .contact-card {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .form-control {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .send-button {
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+}
